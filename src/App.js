@@ -1,24 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Todos from "./components/Todos";
+import Counter from "./components/Counter";
+import ShowHideText from "./components/ShowHideText";
 function App() {
+  //פה כותבים את הפונקציה
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+         {/*<Counter />*/}
+          <ShowHideText> <h1>todo list</h1> </ShowHideText>
+          {/*<ShowHideText> <h1>hello</h1> </ShowHideText>*/}
+          <Todos/>
+      </div>
   );
 }
 
