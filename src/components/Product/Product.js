@@ -70,7 +70,7 @@ import IconButton from '@mui/material/IconButton';
                     <Typography variant="h5" color="green">
                         {price}$
                     </Typography>
-                    <Typography variant="body2" color={rating.rate > 4 ? {red} : "text.secondary"}>
+                    <Typography variant="body2" color={rating.rate > 4 ? red : "text.secondary"}>
                         {rating.rate}⭐ ({rating.count})
                     </Typography>
                 </CardContent>

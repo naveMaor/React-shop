@@ -35,7 +35,7 @@ function Header({ categoriesList, handleCategory ,handleSort }) {
                         ))}
                     </select>
                 </div>
-                <div>
+                <div className="collection-sort">
                     <label>Filter By Price</label>
                     <RangeSlider/>
                 </div>

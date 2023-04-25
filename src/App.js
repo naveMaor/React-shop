@@ -27,7 +27,12 @@ function App({}) {
     }, []);
 
     const filterByCategoryAndByPrice = (category, price) => {
-    setCurrentProducts(allProducts.filter((product) => product.category === category && product.price >= price[0] && product.price <= price[1]));
+        console.log(category, price);
+        if (category === "Show All") {
+            setCurrentProducts(allProducts.filter((product) => product.price >= price[0] && product.price <= price[1]));
+            return;
+        }
+        setCurrentProducts(allProducts.filter((product) => product.category === category && product.price >= price[0] && product.price <= price[1]));
     }
 
     useEffect(() => {
