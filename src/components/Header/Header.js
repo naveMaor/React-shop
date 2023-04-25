@@ -1,7 +1,10 @@
 import "./Header.css";
+import RangeSlider from "./RangeSlider";
 
 
 function Header({ categoriesList, handleCategory ,handleSort }) {
+
+
     const sortOptions = [
         { label: "Top Rated", value: "top-rated" },
         { label: "Best Selling", value: "best-selling" },
@@ -31,6 +34,10 @@ function Header({ categoriesList, handleCategory ,handleSort }) {
                             </option>
                         ))}
                     </select>
+                </div>
+                <div>
+                    <label>Filter By Price</label>
+                    <RangeSlider/>
                 </div>
             </div>
         </nav>

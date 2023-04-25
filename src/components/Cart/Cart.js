@@ -3,29 +3,28 @@
 import CartContext from "../Mycontext";
 import { useContext } from "react";
 import "./Cart.css";
-function Cart(){
-    const {cart, setCart} = useContext(CartContext);
-    const total = cart.reduce((acc, item) => acc + item.price, 0);
+function Cart() {
+    const { cart, setCart } = useContext(CartContext);
+    const total = cart ? cart.reduce((acc, item) => acc + item.price, 0) : 0;
 
     return (
         <div>
             <h1>Cart</h1>
             <ul>
-                {cart.map((item, index) => {
-                    return(
+                {cart && cart.map((item, index) => {
+                    return (
                         <div className="CartList">
                             <li key={index}>
-                                <img src={item.image} />
+                                <img src={item.image} alt={item.title} />
                                 {item.title} {item.price}$
                             </li>
                         </div>
-
                     )
-                }
-                )}
+                })}
             </ul>
             <h3>Total: {total}$</h3>
         </div>
     );
 }
+
 export default Cart;
